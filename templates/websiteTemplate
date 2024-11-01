@@ -6,45 +6,82 @@ import dash_bootstrap_components as dbc
 from dash import Input, Output, State, callback, dcc, html
 from dash.exceptions import PreventUpdate
 
+a = '''
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+'''
+
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.title = "My First Dash App"
+app.title = "Template"
 
 app.layout = html.Div(
     [
-        dbc.Card(
+        html.Header(
             [
-                dbc.CardHeader("First Dash App"),
-                dbc.CardBody(
-                    [
-                        html.Div(
-                            [
-                                dbc.Label("Number"),
-                                dbc.Input(placeholder="Place a number here", type="text", id='num_input'),
-                                dbc.FormText("Negative numbers are not allowed."),
-                            ]
-                        ), 
-                        html.Div(
-                            [
-                                dbc.Label("Process"),
-                                dbc.Select(
-                                    id="process_select",
-                                    options=[
-                                        {"label": "Get Factorial", "value": 1},
-                                        {"label": "Generate Fibonacci", "value": 2},
-                                    ],
-                                ),
-                                dbc.FormText("Select an operation"),
-                            ]
-                        ), 
-                        dbc.Button("Calculate!", id='btn_calculate', color='primary', n_clicks=0),
-                        html.Div(id='output_area')
-                    ]
+                html.Img(
+                    src = "assets/PawssionProjectLogo.png",
+                    style={
+                        'width': 'auto',      # Set width to 100% to make it responsive
+                        'maxWidth': '400px',  # Optional: limit the max width
+                        'height': 'auto',     # Maintain aspect ratio
+                        'margin': '20px',
+                        'align':'left'
+                        }
                 ),
+                dbc.Nav(
+                    [
+                        dbc.NavItem(dbc.NavLink("Adopt", active=True, href="#")),
+                        dbc.NavItem(dbc.NavLink("Donate", href="#")),
+                        dbc.NavItem(dbc.NavLink("Meet the Rescues", href="#")),
+                        dbc.NavItem(dbc.NavLink("Our Story", disabled=True, href="#")),
+                        dbc.NavItem(dbc.NavLink("FAQs", disabled=True, href="#")),
+                        dbc.NavItem(dbc.NavLink("Our Story", disabled=True, href="#")),
+                        html.Div([dbc.Button("Sign-In", color="primary")], className = "signIn"),
+                        html.Div([dbc.Button("Register", color="primary")], className = "registerButton")
+                    ],
+                    navbar=True,
+                    horizontal="end",
+                    style={'justifyContent': 'center','display': 'flex','padding':'20px'} 
+                )
             ],
-            style={"width": "18rem"},
+            style = {
+                'backgroundColor':'#F7EFCF',
+                'display': 'flex',
+                'justifyContent': 'center',
+                'padding':'20px'
+            }
+        ),
+
+        html.Tbody(
+            [
+                html.Div(html.P(a),style={'padding': '20px'}),
+                html.Div(html.P(a),style={'padding': '20px'}),
+                html.Div(html.P(a),style={'padding': '20px'}),
+                html.Div(html.P(a),style={'padding': '20px'}),
+                html.Div(html.P(a),style={'padding': '20px'}),
+                html.Div(html.P(a),style={'padding': '20px'}),
+                html.Div(html.P(a),style={'padding': '20px'})
+            ]
+        ),
+
+        html.Footer(
+            html.Div(
+                [
+                    html.P("Pawssion Project Foundation Inc.", style={'textAlign': 'center'}),
+                    html.P("Bulacan Shelter: 1429 Paradise 1, Purok 7 Tungkong Mangga, SJDM, Bulacan", style={'textAlign': 'center'}),
+                    html.P("Bacolod Shelter: Balay Pawssion, Google Maps: M2JV+5W, Bacolod, Negros Occidental", style={'textAlign': 'center'}),
+                    html.P("info@pawssionproject.org", style={'textAlign': 'center'})
+                ],
+                style={
+                    'padding': '20px',
+                    'backgroundColor': '#f8f9fa',  # Light background color
+                    'borderTop': '1px solid #dee2e6'  # Top border for separation
+                }
+            ),
+            style={'marginTop': 'auto'}
         )
-    ]
+    ],
+    style={'display': 'flex', 'flexDirection': 'column', 'minHeight': '100vh'}
 )
 
 '''
