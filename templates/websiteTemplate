@@ -1,0 +1,69 @@
+import webbrowser
+from multiprocessing import process
+
+import dash
+import dash_bootstrap_components as dbc
+from dash import Input, Output, State, callback, dcc, html
+from dash.exceptions import PreventUpdate
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+app.title = "My First Dash App"
+
+app.layout = html.Div(
+    [
+        dbc.Card(
+            [
+                dbc.CardHeader("First Dash App"),
+                dbc.CardBody(
+                    [
+                        html.Div(
+                            [
+                                dbc.Label("Number"),
+                                dbc.Input(placeholder="Place a number here", type="text", id='num_input'),
+                                dbc.FormText("Negative numbers are not allowed."),
+                            ]
+                        ), 
+                        html.Div(
+                            [
+                                dbc.Label("Process"),
+                                dbc.Select(
+                                    id="process_select",
+                                    options=[
+                                        {"label": "Get Factorial", "value": 1},
+                                        {"label": "Generate Fibonacci", "value": 2},
+                                    ],
+                                ),
+                                dbc.FormText("Select an operation"),
+                            ]
+                        ), 
+                        dbc.Button("Calculate!", id='btn_calculate', color='primary', n_clicks=0),
+                        html.Div(id='output_area')
+                    ]
+                ),
+            ],
+            style={"width": "18rem"},
+        )
+    ]
+)
+
+'''
+@app.callback(
+	[
+		Output('output_area', 'children')
+	],
+	[
+		Input('btn_calculate', 'n_clicks')
+	], 
+	[
+		State('num_input', 'value'), 
+		State('process_select', 'value')
+	]
+)
+'''
+
+
+
+if __name__ == '__main__':
+    webbrowser.open('http://127.0.0.1:8050', autoraise=True)
+    app.run_server()
