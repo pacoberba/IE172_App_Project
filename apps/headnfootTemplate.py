@@ -39,8 +39,8 @@ def create_footer():
                 ],
                 style={
                     'padding': '35px',
-                    'backgroundColor': '#343434',  # Light background color
-                    'borderTop': '1px solid #dee2e6',  # Top border for separation
+                    'backgroundColor': '#343434',
+                    'borderTop': '1px solid #dee2e6',
                     'color':'white',
                     }
                 ),
@@ -48,18 +48,3 @@ def create_footer():
         ],
     )
     return footer
-
-#'display': 'flex', 'flexDirection': 'column', 
-
-style={
-                'position': 'fixed',
-                'top': '0',
-                'left': '0',
-                'right': '0',
-                'backgroundColor': '#F7EFCF',  # Header background
-                'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
-                'justifyContent': 'center',
-                'display': 'flex'
-                }
-
-style={'justifyContent': 'center','display': 'flex','padding':'40px'} 
