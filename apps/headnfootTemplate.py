@@ -3,6 +3,8 @@ import dash_bootstrap_components as dbc
 from dash import dcc, html
 from dash.exceptions import PreventUpdate
 
+from app import app
+
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 app.layout = html.Div(
