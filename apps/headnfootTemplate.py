@@ -1,18 +1,9 @@
-import webbrowser
-from multiprocessing import process
-
 import dash
 import dash_bootstrap_components as dbc
-from dash import Input, Output, State, callback, dcc, html
+from dash import dcc, html
 from dash.exceptions import PreventUpdate
 
-a = '''
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-'''
-
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-
-app.title = "Template"
 
 app.layout = html.Div(
     [
@@ -30,14 +21,12 @@ app.layout = html.Div(
                 dbc.Nav(
                     [
                         html.Div([dbc.Button("Adopt",style={'margin': '0 10px', 'backgroundColor':'#556B2F'})]),
-                        dbc.NavItem(dbc.NavLink("Adopt", href="#", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("Donate", href="#", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("Meet the Rescues", href="#", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("Our Story",  href="#", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("FAQs", href="#", style={'color':'black'})),
-                        dbc.NavItem(dbc.NavLink("Our Story", href="#", style={'color':'black'})),
-                        html.Div([dbc.Button("Sign-In", color='light',style={'margin': '0 10px'})]),
-                        html.Div([dbc.Button("Register", color='dark',style={'margin': '0 10px'})])
+                        html.Div([dbc.Button("Sign-In", color='light', href="/signin", style={'margin': '0 10px'})]),
+                        html.Div([dbc.Button("Register", color='dark', href="/register", style={'margin': '0 10px'})])
                     ],
                     navbar=True,
                     style={'justifyContent': 'center','display': 'flex','padding':'40px'} 
@@ -53,19 +42,6 @@ app.layout = html.Div(
                 'justifyContent': 'center',
                 'display': 'flex'
             }
-        ),
-
-        html.Tbody(
-            [
-                html.Div(html.P(a),style={'padding': '10px'}),
-                html.Div(html.P(a),style={'padding': '10px'}),
-                html.Div(html.P(a),style={'padding': '10px'}),
-                html.Div(html.P(a),style={'padding': '10px'}),
-                html.Div(html.P(a),style={'padding': '10px'}),
-                html.Div(html.P(a),style={'padding': '10px'}),
-                html.Div(html.P(a),style={'padding': '10px'})
-            ],
-            style={'paddingTop': '150px'}
         ),
 
         html.Footer(
@@ -88,9 +64,3 @@ app.layout = html.Div(
     ],
     style={'display': 'flex', 'flexDirection': 'column', 'minHeight': '100vh'}
 )
-
-
-
-if __name__ == '__main__':
-    webbrowser.open('http://127.0.0.1:8050', autoraise=True)
-    app.run_server()
