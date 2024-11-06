@@ -10,6 +10,10 @@ from dash.exceptions import PreventUpdate
 from app import app
 from apps import headnfootTemplate as hft
 from apps import home
+from apps.adopt import adopt
+from apps.companyInfo import contactUs, faqs, ourStory
+from apps.donate import donate
+from apps.MeetTheRescues import meetTheRescues
 #from apps.headnfootTemplate import create_footer
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -26,13 +30,11 @@ app.layout = html.Div(
                 html.H1("Welcome to Pawssion Project"),
                 html.P(a),
                 html.P(a),
-                html.P(a),
-                html.P(a),
             ],
             style={
                 'position':'relative',             # Allow content to take up remaining space
-                'marginTop': '120px',  # Give space for the fixed header (adjust based on header height)
-                'padding': '70px'
+                'marginTop': '150px',  # Give space for the fixed header (adjust based on header height)
+                'padding': '60px'
             }
         ),
         hft.create_footer()
@@ -69,22 +71,22 @@ def displaypage (pathname):
             returnlayout = home.layout
 
         elif pathname == '/adopt':
-            returnlayout = 'adopt'
+            returnlayout = adopt.layout
         
         elif pathname == '/donate':
-            returnlayout = 'donate'
+            returnlayout = donate.layout
 
         elif pathname == '/meettherescues':
-            returnlayout = 'meetTheRescues'
+            returnlayout = meetTheRescues.layout
 
         elif pathname == '/ourstory':
-            returnlayout = 'ourStory'
+            returnlayout = ourStory.layout
 
         elif pathname == '/faqs':
-            returnlayout = 'faqs'
+            returnlayout = faqs.layout
 
         elif pathname == '/contactus':
-            returnlayout = 'contactUs'
+            returnlayout = contactUs.layout
         
         elif pathname == '/signin':
             returnlayout = 'signin'
