@@ -8,7 +8,10 @@ def create_header():
             html.Header(children=[
                 html.Img(
                     src = "assets/PawssionProjectLogo.png",
-                    style={'width': '400px', 'maxWidth': '400px', 'height': 'auto', 'margin': '20px 0'}
+                    style={'width': '400px',
+                           'maxWidth': '400px',
+                           'height': 'auto',
+                           'margin': '20px 0'}
                 ),
                 dbc.Nav(children=[
                         html.Div([dbc.Button("Adopt", href="/adopt", style={'margin': '0 10px', 'backgroundColor':'#556B2F'})]),
@@ -20,8 +23,19 @@ def create_header():
                         html.Div([dbc.Button("Register", color='dark', href="/register", style={'margin': '0 10px'})])
                     ],
                     navbar=True,
+                    style={'justifyContent': 'center','display': 'flex','padding':'40px'} 
                 )
             ],
+            style={
+                'position': 'fixed',
+                'top': '0',
+                'left': '0',
+                'right': '0',
+                'backgroundColor': '#F7EFCF',
+                'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
+                'justifyContent': 'center',
+                'display': 'flex'
+            }
             )
         ]
     )
@@ -38,13 +52,15 @@ def create_footer():
                     html.P("info@pawssionproject.org", style={'textAlign': 'center'})
                 ],
                 style={
-                    'padding': '35px',
+                    'padding': '20px',
                     'backgroundColor': '#343434',
                     'borderTop': '1px solid #dee2e6',
                     'color':'white',
                     }
                 ),
+                style={'marginTop': 'auto'}
             )   
         ],
+        style={'display': 'flex', 'flexDirection': 'column', 'minHeight': '100vh'},
     )
     return footer
