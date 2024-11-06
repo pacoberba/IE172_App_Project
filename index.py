@@ -25,25 +25,14 @@ app.layout = html.Div(
     [
         hft.create_header(),
         dcc.Location(id='url', refresh=True),
-        html.Div(
-            children=[
-                html.H1("Welcome to Pawssion Project"),
-                html.P(a),
-                html.P(a),
-            ],
-            style={
-                'position':'relative',             # Allow content to take up remaining space
-                'marginTop': '150px',  # Give space for the fixed header (adjust based on header height)
-                'padding': '60px'
-            }
-        ),
+        html.Div(id='page_content'),
         hft.create_footer()
     ],
     style={
-        'display': 'flex',              # Use Flexbox to structure the layout
-        'flexDirection': 'column',      # Stack the header and footer vertically
-        'height': '100vh',              # Ensure the layout takes up the full viewport height
-        'justifyContent': 'space-between',  # Push the header and footer to top and bottom
+        'display': 'flex',
+        'flexDirection': 'column', 
+        'height': '100vh',          
+        'justifyContent': 'space-between',
     }
 )
 
