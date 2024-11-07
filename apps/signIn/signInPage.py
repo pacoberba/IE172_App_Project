@@ -9,20 +9,35 @@ from app import app
 # We cannot really modify the "app" variable here, we only do it in index.py
 layout = html.Div(
     [
-        html.H2('Welcome to our app!'),
-        html.Hr(),
+        html.H1("Enter User Credentials"),
         html.Div(
             [
-                html.Span(
-                    "This is the Sign-In Page",
+                dbc.Label("Email", html_for="example-email"),
+                dbc.Input(type="email", id="example-email", placeholder="Enter email"),
+                dbc.FormText(
+                    "Are you on email? You simply have to be these days",
+                    color="secondary",
                 ),
-                html.Br(),
-                html.Br(),
-                html.Span(
-                    "Contact the owner if you need assistance!",
-                    style={'font-style':'italic'}
+            ],
+            className="mb-3",
+        ),
+        html.Div(
+            [
+                dbc.Label("Email", html_for="example-email"),
+                dbc.Input(type="email", id="example-email", placeholder="Enter email"),
+                dbc.FormText(
+                    "Are you on email? You simply have to be these days",
+                    color="secondary",
                 ),
-            ]
+                dbc.Button("Register", color='dark', href="/register", style={'margin': '0 10px'}),
+                dbc.Row(
+                    [
+                        html.P("Don’t have an account?"),
+                        html.Label(['Sign Up', html.A('link', href='/register')])
+                    ]
+                )
+            ],
+            className="mb-3",
         )
-    ], style={"marginTop":"200"}
+    ],
 )
