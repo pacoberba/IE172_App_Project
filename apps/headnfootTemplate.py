@@ -34,7 +34,7 @@ def create_header():
                 'backgroundColor': '#F7EFCF',
                 'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
                 'justifyContent': 'center',
-                'display': 'flex'
+                'display': 'flex',
                 'marginBottom':'133px'
             }
             )
