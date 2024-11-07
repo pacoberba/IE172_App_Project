@@ -10,8 +10,8 @@ This is a Final Project for the major IE 172
 |-|-|
 |Paco|Project Manager|
 |Jax|Designer and User Test|
-|Zam|Web Developer|
-|Gelo|Web Developer|
+|Zam|Frontend Developer|
+|Gelo|Backend Developer|
 
 ### References
 - [IE 172 Lecture Repo](https://github.com/csonday/ie172webdev_notes)
