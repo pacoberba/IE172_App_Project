@@ -14,12 +14,11 @@ from apps.adopt import adopt
 from apps.companyInfo import contactUs, faqs, ourStory
 from apps.donate import donate
 from apps.MeetTheRescues import meetTheRescues
+from apps.register import register
+from apps.signIn import signIn
 #from apps.headnfootTemplate import create_footer
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-
-#print(create_header())
-a = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur'
 
 app.layout = html.Div(
     [
@@ -78,10 +77,10 @@ def displaypage (pathname):
             returnlayout = contactUs.layout
         
         elif pathname == '/signin':
-            returnlayout = 'signin'
+            returnlayout = signIn.layout
 
         elif pathname == '/register':
-            returnlayout = 'register'
+            returnlayout = register.layout
 
         else:
             returnlayout = 'error404'
