@@ -1,10 +1,6 @@
 # IE172_App_Project
 This is a Final Project for the major IE 172
 
-[Pawssion Project](https://pawssionproject.org.ph/)
-[Design Reference](https://www.canva.com/design/DAGVAgJW0yg/E66HyoFlRBY4ZYrzyhvo0Q/edit)
-
-
 ### Team Assignations
 |Member|Role|
 |-|-|
