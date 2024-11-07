@@ -1,4 +1,8 @@
-# Change Log S1.1 (11/6/24)
+# Change Log S1.3 (11/7/24, 9:26 AM)
+- Added the content and initial structure for contactUs.py, faqs.py, ourStory.py, meetTheRescues.py
+- Update home.py with initial image
+---
+# Change Log S1.2 (11/6/24)
 ## index.py
 - Restored the one important code (`html.Div(id='page_content')`), this was why the pages didn't load lol
 ## ourStory.py
