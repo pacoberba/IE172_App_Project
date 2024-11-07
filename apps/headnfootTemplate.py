@@ -35,6 +35,7 @@ def create_header():
                 'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
                 'justifyContent': 'center',
                 'display': 'flex'
+                'marginBottom':'133px'
             }
             )
         ]
