@@ -23,6 +23,7 @@ layout = html.Div(
                                     style={'width': '1920px',
                                            'height': '500px',
                                            'overflow': 'hidden',
+                                           'marginBottom':'133px'
                                            }
                 ),
                 html.Div(
