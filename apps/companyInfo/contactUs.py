@@ -28,6 +28,6 @@ layout = html.Div(
                 "For urgent concerns, please send a message to our Facebook page for guidance on the appropriate next steps:"
             ]
         )
-    ]
-    
+    ],
+    style={"marginTop":"200px","marginLeft":"150px","marginRight":"150px","backgroundColor":"#FAF3EB"}
 )
