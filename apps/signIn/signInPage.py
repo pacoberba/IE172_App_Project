@@ -7,37 +7,63 @@ from app import app
 
 # instead of app.layout, we just use the variable "layout" here
 # We cannot really modify the "app" variable here, we only do it in index.py
+import dash
+import dash_bootstrap_components as dbc
+from dash import html
+
+# Layout definition
+import dash
+import dash_bootstrap_components as dbc
+from dash import html
+
+# Layout definition
+import dash
+import dash_bootstrap_components as dbc
+from dash import html
+
+# Layout definition
 layout = html.Div(
     [
-        html.H1("Enter User Credentials"),
+        # Heading
+        html.H1("Enter your User Credentials", style={'textAlign': 'center'}),
+
+        # Email input section
         html.Div(
             [
                 dbc.Label("Email", html_for="example-email"),
                 dbc.Input(type="email", id="example-email", placeholder="Enter email"),
-                dbc.FormText(
-                    "Are you on email? You simply have to be these days",
-                    color="secondary",
-                ),
             ],
             className="mb-3",
         ),
+
+        # Password input section
         html.Div(
             [
-                dbc.Label("Email", html_for="example-email"),
-                dbc.Input(type="email", id="example-email", placeholder="Enter email"),
-                dbc.FormText(
-                    "Are you on email? You simply have to be these days",
-                    color="secondary",
-                ),
-                dbc.Button("Register", color='dark', href="/register", style={'margin': '0 10px'}),
-                dbc.Row(
-                    [
-                        html.P("Don’t have an account?"),
-                        html.Label(['Sign Up', html.A('link', href='/register')])
-                    ]
-                )
+                dbc.Label("Password", html_for="example-password"),
+                dbc.Input(type="password", id="example-password", placeholder="Enter password"),
+                # Forgot password link
+                html.A("Forgot Password?", href="/forgot-password", style={'float': 'right', 'marginTop': '10px'}),
             ],
             className="mb-3",
-        )
+        ),
+
+        # Continue button with green background
+        dbc.Button("Continue", color="success", style={"marginTop": "20px"}),
+
+        # Sign-up prompt
+        html.Div(
+            [
+                html.P("Don't have an account?", style={'textAlign': 'center'}),
+                html.A("Sign Up", href="/register", style={'textAlign': 'center', 'display': 'block'}),
+            ],
+            style={'marginTop': '20px', 'textAlign': 'center'}
+        ),
     ],
+    style={
+        "paddingTop": "200px",
+        "paddingLeft": "150px",
+        "paddingRight": "150px",
+        "paddingBottom": "200px",
+        "backgroundColor": "#FAF3EB"
+    }
 )
