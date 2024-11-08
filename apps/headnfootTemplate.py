@@ -2,7 +2,6 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html
 
-
 def create_header():
     header = html.Div(children=[
             html.Header(children=[
@@ -14,16 +13,19 @@ def create_header():
                            'margin': '20px 0'}
                 ),
                 dbc.Nav(children=[
-                        html.Div([dbc.Button("Adopt", href="/adopt", style={'margin': '0 10px', 'backgroundColor':'#556B2F'})]),
+                        dbc.Nav(children=[
+                        html.Div([dbc.Button("Adopt", href="/adopt", className="btn-custom mx-1")]),
                         dbc.NavItem(dbc.NavLink("Donate", href="/donate", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("Meet the Rescues", href="/meettherescues", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("Our Story",  href="/ourstory", style={'color':'black'})),
                         dbc.NavItem(dbc.NavLink("FAQs", href="/faqs", style={'color':'black'})),
-                        html.Div([dbc.Button("Sign-In", color='light', href="/signin", style={'margin': '0 10px'})]),
-                        html.Div([dbc.Button("Register", color='dark', href="/register", style={'margin': '0 10px'})])
+                        dbc.NavItem(dbc.NavLink("Hi, [Hooman]", href="/accountProfile", style={'color':'#556B2F', 'font-weight':'bold'})),
+                        html.Div([dbc.Button("Logout", color='dark', href="/signin", style={'margin': '0 10px'})])
                     ],
                     navbar=True,
                     style={'justifyContent': 'center','display': 'flex','padding':'40px'} 
+                                )
+                               ]
                 )
             ],
             style={
@@ -35,12 +37,14 @@ def create_header():
                 'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
                 'justifyContent': 'center',
                 'display': 'flex',
-                'marginBottom':'133px'
+                'marginBottom':'21vh'
             }
             )
-        ]
+        ],
+        style={'z-index':'999'}
     )
     return header
+    
     
 
 def create_footer():
