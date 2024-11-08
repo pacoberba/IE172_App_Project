@@ -8,57 +8,43 @@ from app import app
 # instead of app.layout, we just use the variable "layout" here
 # We cannot really modify the "app" variable here, we only do it in index.py
 layout = html.Div(
-    [
+    [   
         html.Div(
             [
                 html.Div(
-                    html.Img(src="assets/DSC_2895-scaled.jpg",
-                             style={'width': '100%',
-                                    'height': 'auto',
-                                    'object-fit': 'cover',
-                                    'object-position': 'center',
-                                    'width': '1920px',
-                                    'height': '500px'}
-                                    ),
-                                    style={'width': '1920px',
-                                           'height': '500px',
-                                           'overflow': 'hidden',
-                                           'marginBottom':'133px'
-                                           }
-                ),
-                html.Div(
                     [
                         html.Div(
-                            html.H1("Join the Pawssion Project!")
+                            html.H1("Join the Pawssion Project!", className="home-banner-title")
                         ),
                         html.Div(
-                            html.H2("Our mission is to rescue.")
+                            html.H2("Our mission is to rescue.", className="home-banner-subtitle")
                         ),
                         html.Div(
-                            html.H2("Our mission is to rescue.")
+                            html.H2("Our dream is that one day, we won't have to.", className="home-banner-subtitle")
                         ),
                         html.Div(
-                            [dbc.Button("Sign-In", color='light', href="/signin", style={'margin': '0 10px'})]
-                        )
-                    ]
+                            [dbc.Button("Help The Cause", color='light', href="/signin", className="home-banner-button")]
+                        ),
+                    ], className="home-banner-text"
                 )
-            ]
-        ),
+            ],
+            className="home-banner-main"),
         html.Div(
             [
                 html.Div(
                     [
-                        html.H1("Adopt"),
+                        html.H1("Adopt",className="home-titles"),
                         html.P("Many of our Adoptables from our Bulacan and Bacolod Shelters have been rescued from death row, from local pounds or from abusive environments. By choosing to adopt, you are giving them the chance to find a new home and to feel the love and security they deserve.")
-                    ]
+                    ], className="home-column", style={'backgroundColor':'#FFFFFF'}
                 ),
                 html.Div(
                     [
-                        html.H1("Donate"),
+                        html.H1("Donate",className="home-titles"),
                         html.P("As a non-profit organization, Pawssion Project operates and relies heavily on donations from the community. We are always called upon to rescue animals suffering from abandonment, abuse, injury or neglect and none of it is possible without your support.")
-                    ]
+                    ],
+                    className="home-column", style={'backgroundColor':'#000000','color':'#FFFFFF'}
                 )
-            ]
+            ], className="home-body"
         )
     ]
 )
