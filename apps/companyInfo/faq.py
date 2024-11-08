@@ -87,5 +87,6 @@ layout = html.Div(
                 )
             ]
         ),
-    ]
+    ],
+    style={"paddingTop":"200px","paddingLeft":"150px","paddingRight":"150px","paddingBottom":"200px","backgroundColor":"#FAF3EB"}
 )
