@@ -1,9 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-color: #FAF3EB;
+    margin-top: 21vh;
+    padding: 1vh 1vw;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Black-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:800;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Black-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:800;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Black-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:800;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Bold-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:bold;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Bold-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:bold;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Extrabold-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:bolder;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Extrabold-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:bolder;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Extralight-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:200;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Extralight-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:200;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:normal;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Regular-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Light-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:300;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Light-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:300;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Medium-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:500;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Medium-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:500;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Semibold-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:600;
+}
+
+@font-face {
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Semibold-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:600;
+}
+
+@font-face { 
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Thin-Italic-trial.ttf') format('truetype');
+    font-style:italic;
+    font-weight:100;
+}
+
+@font-face{
+    font-family:'Bogart';
+    src:url('fonts/Bogart-Thin-trial.ttf') format('truetype');
+    font-style:normal;
+    font-weight:100;
+}
+/* Custom button styling */
+.btn-custom {
+    background-color: #556B2F; /* Dark olive green */
+    color: #F4B623;            /* Golden yellow text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-custom:hover {
+    background-color: #6B8E23; /* Slightly lighter olive green */
+    color: #F4B623;            /* Keep the text color the same */
+}
+
+/* Button active effect */
+.btn-custom:active {
+    background-color: #4D5B24; /* Darker olive green on click */
+    color: #F4B623;
+}
+
+.home-banner-main{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('DSC_2895-scaled.jpg');
+    width:fill;
+    height:500px;
+    object-position:center;
+    z-index:0;
+}
+
+.home-banner-text{
+    font-family:'Bogart';
+    text-align: center;
+    top:50%;
+    right:50%;
+    -ms-transform: translateY(72%);
+    transform: translateY(72%);
+    background-color:rgba(0, 0, 0, 0);
+}
+
+.home-banner-title{
+    font-weight:bold;
+    font-style:normal;
+    color:#F4B623;
+}
+
+.home-banner-subtitle{
+    font-weight:normal;
+    font-style:normal;
+    color:#FAF3EB;
+}
+
+.home-banner-button{
+    margin: 0 10px;
+    font-family:'Roboto';
+    font-weight:bold;
+    color:#FAF3EB;
+    text-transform:uppercase;
+    background-color: #556B2F;
+}
+
 .placeholder-text {
     color: #777;
     font-style: italic;
     font-size: 90%;
 }
 
+.home-column{
+    float:left;
+    width:25%;
+    margin: 5vh 12.5%;
+    padding: 3vh 2vw;
+    border-radius:25px;
+}
+
+.home-body{
+    align-content: center;
+}
+
+.home-titles {
+    font-family:'Bogart';
+    font-weight:bold;
+    font-style:normal;
+    color:#F4B623;
+    text-align:center;
+    margin-bottom:2vh;
+}
+
+.home-body:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 .dash-bootstrap .form-group>div {
     display: block !important;
